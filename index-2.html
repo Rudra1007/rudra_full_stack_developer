@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <title>Rudra Wankhede</title>
 
 <head>
     <style>
@@ -45,26 +46,65 @@
             align-items: center;
             flex-direction: row;
         }
+        p:hover{
+            color: #FDFFAB;
+            font-size: x-large;
+            font-family: fantasy;
+            font-weight: bolder;
+        }
+        a:hover{
+            color: rgb(246, 255, 0);
+        }
+       
+        h1:hover{
+            font-family: fantasy;
+        }
+        .rudra-one:hover{
+          height: 250px;
+          width: 250px;
+          animation-name: img;
+          animation-duration: 3s;
+          
+        }
+        @keyframes img {
+            from {height: 200px; width: 200;}
+            to {height: 250px; width: 300;}
+        }
+        @keyframes rudra{
+            from  {height: 200; width: 200;}
+            to {height: 250px; width: 250px;}
+        }
+        .rudra{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            animation-name: rudra;
+            animation-duration: 3s;
+            
+            
+        }
+        
     </style>
 </head>
 
 <body>
     <table>
+        <img src="" alt="">
         <!-- first row -->
         <tr>
             <!-- first column -->
-            <td class="first-row"><a href="#scroll-1">ABOUT</a></td>
+            <td style="text-align: center;" class="first-row"><a href="#scroll-1">ABOUT</a></td>
             <!-- second column -->
-            <td class="first-row"><a href="#scroll-2">PROJECTS</a></td>
+            <td style="text-align: center;" class="first-row"><a href="#scroll-2">PROJECTS</a></td>
             <!-- third column -->
-            <td class="first-row"><a href="#scroll-3">EXPERIENCE</a></td>
+            <td style="text-align: center;" class="first-row"><a href="#scroll-3">EXPERIENCE</a></td>
 
         </tr>
         <!-- second row -->
         <tr>
             <td id="scroll-1" class="second-row" colspan="4">
-                <h1>Rudra Wankhede</h1>
-                <img style="border-radius: 50%;" src="./myimg.jpg" height="200" width="200" alt="">
+                <h1 style="transition: width 2s">Rudra Wankhede</h1>
+                <img class="rudra" src="./myimg.jpg" height="200" width="200" alt="">
 
                 <p>I AM 14 YEAR OLD BOY. BORN ON 10th JULY 2011. NOW I STUDY IN CLASS 8th CBSC AT ORCHID PUBLIC SCHOOL .
                     <br>
@@ -78,10 +118,10 @@
         <tr>
             <td id="scroll-2" class="third-row" colspan="3">
                 <div class="main">
-                    <div><a href="./chess.html"><img src="./chess.jpg" height="150" width="150" alt=""></a></div>
-                    &nbsp &nbsp &nbsp<div><a href="./webs.html"><img src="./web.jpg" height="150" width="150"
+                    <div><a href="./chess.html"><img src="./chess.jpg" height="150" width="150" class="rudra-one"></a></div>
+                    &nbsp &nbsp &nbsp<div><a href="./webs.html"><img class="rudra-one" src="./web.jpg" height="150" width="150"
                                 alt=""></a></div>
-                    &nbsp &nbsp &nbsp<div><a href="./allinone.html"><img src="./more.jpg" height="150" width="150"
+                    &nbsp &nbsp &nbsp<div><a href="./allinone.html"><img class="rudra-one" src="./more.jpg" height="150" width="150"
                                 alt=""></div></a>
 
 
