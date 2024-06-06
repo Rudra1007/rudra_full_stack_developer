@@ -1,26 +1,150 @@
 <!DOCTYPE html>
 <html>
+    <title>Rudra Wankhede</title>
+
 <head>
-    <link rel="stylesheet" href="./index.css">
+    <style>
+        .first-row {
+            background-color: #D9EDBF;
+            height: 10vh;
+            width: 50vw;
+            position: sticky;
+            top: 0%;
+
+        }
+
+        .second-row {
+            background-color: #FF9800;
+            height: 40vh;
+            width: 50vw;
+        }
+
+        .third-row {
+            background-color: #2C7865;
+            height: 40vh;
+        }
+
+        .fourth-row {
+            background-color: #90D26D;
+            height: 40vh;
+        }
+
+        .fifth-row {
+            background-color: #898121;
+            height: 10vh;
+            width: 50vw;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .main {
+            background-color: #2C7865;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        p:hover{
+            color: #FDFFAB;
+            font-size: x-large;
+            font-family: fantasy;
+            font-weight: bolder;
+        }
+        a:hover{
+            color: rgb(255, 132, 0);
+        }
+       
+        h1:hover{
+            font-family: fantasy;
+        }
+        .rudra-one:hover{
+          height: 250px;
+          width: 250px;
+          animation-name: img;
+          animation-duration: 3s;
+          
+        }
+        @keyframes img {
+            from {height: 200px; width: 200;}
+            to {height: 250px; width: 300;}
+        }
+        @keyframes rudra{
+            from  {height: 200; width: 200;}
+            to {height: 250px; width: 250px;}
+        }
+        .rudra{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            animation-name: rudra;
+            animation-duration: 3s;
+            
+            
+        }
+        
+    </style>
 </head>
-<body style="margin: 0%;">
-    <!-- first div -->
-    <div class="first-div">
-        <h1 style="text-align: center;">WELCOME TO MY WORLD</h1>
-        <p style="text-align: center;">Welocome to world of Rudra of HTML CSS LOADING...</p>
-        <button class="about"><a href="#about-1">ABOUT</a></button>
-        <button class="about"><a href="#education-2">EDUCATION</a></button>
-        <button class="about"><a href="#project-3">PROJECTS</a></button>
-        <button class="about"><a href="#links-4">links</a></button>
-    </div>
-    <!-- second div -->
-    <div id="about-1" class="about-detail"><h1>Rudra Wankhede</h1><img src="./OIG1.HDNcL9UGNNypz99RNXYa.jpg" height="150vh" width="150vh" alt=""></div>
-    <!-- third div -->
-    <div id="education-2" class="education-detail">education</div>
-    <!-- fourt div -->
-    <div id="project-3" class="projects">projects</div>
-    <!-- fifth div -->
-    <div id="links-4" class="links">links</div>
-    
+
+<body>
+    <table>
+        <img src="" alt="">
+        <!-- first row -->
+        <tr>
+            <!-- first column -->
+            <td style="text-align: center;" class="first-row"><a href="#scroll-1">ABOUT</a></td>
+            <!-- second column -->
+            <td style="text-align: center;" class="first-row"><a href="#scroll-2">PROJECTS</a></td>
+            <!-- third column -->
+            <td style="text-align: center;" class="first-row"><a href="#scroll-3">EXPERIENCE</a></td>
+
+        </tr>
+        <!-- second row -->
+        <tr>
+            <td id="scroll-1" class="second-row" colspan="4">
+                <h1 style="transition: width 2s">Rudra Wankhede</h1>
+                <img class="rudra" src="./myimg.jpg" height="200" width="200" alt="">
+
+                <p>I AM 14 YEAR OLD BOY. BORN ON 10th JULY 2011. NOW I STUDY IN CLASS 8th CBSC AT ORCHID PUBLIC SCHOOL .
+                    <br>
+                    I LOVE TECHNOLOGY AND ANIMALS ESPECIALLY DOG . I AM A GOOD BOWLER AND DECENT BATTING.
+                </p>
+
+            </td>
+
+        </tr>
+        <!-- third row -->
+        <tr>
+            <td id="scroll-2" class="third-row" colspan="3">
+                <div class="main">
+                    <div><a href="./chessopen.html"><img src="./royal4.jpg" height="150" width="150" class="rudra-one"></a></div>
+                    &nbsp &nbsp &nbsp<div><a href="./webs.html"><img class="rudra-one" src="./web.jpg" height="150" width="150"
+                                alt=""></a></div>
+                    &nbsp &nbsp &nbsp<div><a href="./allinone.html"><img class="rudra-one" src="https://play-lh.googleusercontent.com/yip-YKvtCIOy5duwC5sa_kqSiDrqvuKjPE45aCj3lDEIcLaAZy8y7KzBnQ07kxaJTg" height="150" width="150"
+                                alt=""></div></a>
+
+
+                </div>
+            </td>
+        </tr>
+        <!-- fourth row -->
+        <tr>
+            <td id="scroll-3" class="fourth-row" colspan="4">
+                <img style="border-radius: 40%;" src="https://i.stack.imgur.com/uH0yh.png" height="200" width="200" alt="">
+                <img style="border-radius: 40%;" src="https://codeconvey.com/wp-content/uploads/2019/04/CSS-Percentage-Circle.jpg.webp" height="200" width="200" alt="">
+            </td>
+        </tr>
+        <!-- fifth row -->
+        <tr>
+            <td class="fifth-row"><a style="text-align: center;"
+                    href="https://join.skype.com/invite/tE4ib6Co3tq6">SKYPE</a></td>
+            <td class="fifth-row"><a style="text-align: center;"
+                    href="https://github.com/Rudra1007/rudra_full_stack_developer">Github ID</a></td>
+            <td class="fifth-row">blank</td>
+        </tr>
+
+    </table>
 </body>
+
 </html>
