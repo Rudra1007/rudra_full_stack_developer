@@ -1,0 +1,58 @@
+.main {
+    margin-left: 30%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    width: 500px;
+}
+
+
+.top {
+    background-color: #40A578;
+    height: 100px;
+    width: 500px;
+}
+
+.main-area {
+    height: 600px;
+    width: 500px;
+    background-color: #F8FAE5;
+    margin-top: 0;
+}
+
+.camera {
+    margin-top: 85;
+    margin-left: 380px;
+}
+
+.search {
+    margin-left: 420px;
+}
+
+.more {
+    margin-left: 460px;
+}
+
+.Archived {
+    height: 35px;
+    float: left;
+
+}
+
+.one {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+.seen {
+    margin-left: 80px;
+   margin-top: -20%;
+    
+}
+p{
+    font-size: small;
+}
