@@ -1,146 +1,689 @@
 <!DOCTYPE html>
-<html>
-    <title>Rudra Wankhede</title>
+<html lang="en">
 
 <head>
-    <style>
-        .first-row {
-            background-color: #D9EDBF;
-            height: 10vh;
-            width: 50vw;
-            position: sticky;
-            top: 0%;
+  <title>Rudra Wankhede</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* html code */
+    *:root {
+      --main-colour: #007f73;
+      --text-colour: #fff;
+    }
 
-        }
+    html {
+      font-size: 62.5%;
+      overflow-x: hidden;
+    }
 
-        .second-row {
-            background-color: #FF9800;
-            height: 40vh;
-            width: 50vw;
-        }
+    body {
+      background-color: #0F0F0F;
 
-        .third-row {
-            background-color: #2C7865;
-            height: 40vh;
-        }
+    }
 
-        .fourth-row {
-            background-color: #90D26D;
-            height: 40vh;
-        }
+    section {
+      min-height: 100vh;
+      padding: 10rem 9% 2rem;
+    }
 
-        .fifth-row {
-            background-color: #898121;
-            height: 10vh;
-            width: 50vw;
-        }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    .my-image {
+      margin-top: 20%;
+      height: 55vh;
+      width: 30vw;
+    }
 
-        .main {
-            background-color: #2C7865;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-        }
-       
-        a:hover{
-            color: rgb(255, 132, 0);
-        }
-       
-        .name:hover{
-            font-family: fantasy;   
-        }
-       
-         @keyframes img {
-            from {height: 200px; width: 200;}
-            to {height: 250px; width: 300;}
-        }
-        @keyframes rudra{
-            from  {height: 200; width: 200;}
-            to {height: 250px; width: 250px;}
-        }
-        .rudra{
-            height: 200px;
-            width: 200px;
-            border-radius: 50%;
-            animation-name: rudra;
-            animation-duration: 3s;
-            
-            
-        }
-        .name{
-            transition: 2s;
-        }
-        .PROJECTS:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-    </style>
+    .logo {
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .header {
+      background-color: var(--main-colour);
+    }
+
+    * {
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      scroll-behavior: smooth;
+      font-family: -apple-system, sans-serif;
+    }
+
+    .navbar a {
+
+      color: var(--bg-colour);
+      margin-left: 4rem;
+      font-weight: 700;
+      transition: 0.3s ease;
+      font-size: 1.9rem;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: var(--text-colour);
+    }
+
+    #menu-icon {
+      font-size: 3.6rem;
+      color: var(--bg-colour);
+      cursor: pointer;
+      display: none;
+    }
+
+    /* header section code */
+
+    .header {
+      position: fixed;
+      width: 100%;
+      top: 0%;
+      right: 0%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 5%;
+      background: var(--main-colour);
+      backdrop-filter: blur(10px);
+      transition: all 0.5s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    h2 {
+      color: white;
+    }
+
+    i {
+      color: white;
+    }
+
+
+
+
+
+
+    /* home section code */
+    .home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home-img img {
+
+      border-radius: 50%;
+      box-shadow: 0 0 25px var(--main-colour);
+      cursor: pointer;
+      animation: floatImage 4s ease-in-out infinite;
+      transition: 0.4s ease;
+    }
+
+    .home-img img:hover {
+      box-shadow: 0 0 25px var(--main-colour),
+        0 0 35px var(--main-colour),
+        0 0 45px var(--main-colour)
+    }
+
+    @keyframes floatImage {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-2.4rem);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .home-content {
+      margin-left: 5rem
+    }
+
+    .home-content h3 {
+      font-size: 3.7rem;
+      font-weight: 700;
+    }
+
+    .home-content h3:nth-of-type(2) {
+      margin-bottom: 2rem;
+    }
+
+    span {
+      color: var(--main-colour);
+
+
+    }
+
+    .home-content h1 {
+      font-size: 6rem;
+      font-weight: 700;
+      line-height: 8rem;
+    }
+
+    .home-content p {
+      font-size: 1.6rem;
+    }
+
+    .social-media a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 42px;
+      background: transparent;
+      border: 0.2rem solid var(--main-colour);
+      border-radius: 50%;
+      font-size: 2rem;
+      color: var(--main-colour);
+      margin: 3rem 1.5rem 3rem 0;
+      transition: 0.3 ease;
+    }
+
+    .social-media a:hover {
+      transform: scale(1.2) translateY(-10px);
+      background-color: var(--main-colour);
+      color: var(--bg-colour);
+      box-shadow: 0 0 25px var(--main-colour);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.8rem;
+      background: var(--main-colour);
+      border-radius: 4rem;
+      box-sizing: none;
+      font-size: 1.6rem;
+      color: var(--bg-colour);
+      letter-spacing: 0.1rem;
+      font-weight: 600;
+      transition: 0.3s ease;
+
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 1.6rem var(--main-colour);
+    }
+
+    .a,
+    h1,
+    h3,
+    p {
+      color: white;
+    }
+
+
+
+
+
+    /* About section code */
+    #about {
+      padding: 80px 0;
+      color: #ababab;
+      text-align: right;
+
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .about-col1 {
+      flex-basis: 35%;
+    }
+
+    .about-col1 img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .about-col2 {
+      flex-basis: 60%;
+    }
+
+    .sub-title {
+      font-size: 60px;
+      font-weight: 600;
+      color: #fff;
+      margin-right: 100%;
+    }
+
+    .tab-title {
+      display: flex;
+      margin: 20px 0 40px;
+    }
+
+    .tab-links {
+      margin-right: 50px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .tab-links::after {
+      content: '';
+      width: 0;
+      height: 3px;
+      background-color: #007f73;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      transition: 0.5s;
+    }
+
+    .tab-links.active-link::after {
+      width: 50%;
+    }
+
+    .tab-contents ul li {
+      list-style: none;
+      margin: 10px 0;
+    }
+
+    .tab-contents ul li span {
+      color: #007f73;
+      font-size: 14px;
+    }
+
+    .tab-contents {
+      display: none;
+    }
+
+    .tab-contents.active-tab {
+      display: block;
+    }
+
+
+
+
+    /* services section code */
+    #services {
+      padding: 30px 0;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+    }
+
+    .services-list div {
+      background: #262626;
+      padding: 40px;
+      font-size: 13px;
+      font-weight: 300;
+      border-radius: 10px;
+      transition: background 0.5s, transform 0.5s;
+    }
+
+    .services-list div i {
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
+
+    .services-list div h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .services-list div a {
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      margin-top: 20px;
+      display: inline-flex;
+    }
+
+    .services-list div:hover {
+      background: #007f73;
+      transform: translateY(-10px);
+    }
+
+
+
+
+
+    /* projects section code */
+
+
+    #portfilio {
+      padding: 50px 0;
+    }
+
+    .work-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+    }
+
+    .work {
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    .work img {
+      width: 25vw;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .layer {
+      width: 100%;
+      height: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), #007f73);
+      border-radius: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 40px;
+      text-align: center;
+      font-size: 14px;
+      transition: height 0.5s;
+    }
+
+    .layer h3 {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .work:hover img {
+      transform: scale(1.1);
+
+    }
+
+    .work:hover .layer {
+      height: 100%;
+    }
+
+
+    /* contact section code */
+
+    .contact-left{
+      flex-basis: 35%;
+    }
+
+    .contact-right{
+      flex-basis: 60%;
+    }
+
+    .contact-left p{
+      margin-top: 30px;
+    }
+
+    .contact-left p i{
+      color: var(--main-colour);
+      margin-right: 15px;
+      font-size: 25px;
+    }
+
+    .social-icon{
+      margin-top: 30px;
+
+    }
+
+    .social-icon a{
+      text-decoration: none;
+      font-size: 30px;
+      margin-right: 50px;
+      color: #ababab;
+      display: inline-block;
+      transition: transform 0.5s;
+    }
+
+    .social-icon a:hover{
+      color: var(--main-colour);
+      transform: translateY(-5px);
+    }
+
+    .btn.btn2{
+      display: inline-block;
+    }
+
+    
+  </style>
+  <script src="https://kit.fontawesome.com/a69fbe4709.js" crossorigin="anonymous"></script>
+
+
 </head>
 
-<body style="margin: 0%;">
-    <table>
-        <img src="" alt="">
-        <!-- first row -->
-        <tr>
-            <!-- first column -->
-            <td style="text-align: center;" class="first-row"><a href="#scroll-1">ABOUT</a></td>
-            <!-- second column -->
-            <td style="text-align: center;" class="first-row"><a href="#scroll-2">PROJECTS</a></td>
-            <!-- third column -->
-            <td style="text-align: center;" class="first-row"><a href="#scroll-3">EXPERIENCE</a></td>
+<body>
+  <!-- header section -->
+  <header class="header">
+    <a href="#home" class="logo">Rudra Wankhede</a>
 
-        </tr>
-        <!-- second row -->
-        <tr>
-            <td id="scroll-1" class="second-row" colspan="4">
-                <h1 class="name" >Rudra Wankhede</h1>
-                <img class="rudra" src="./myimg.jpg" height="200" width="200" alt="">
+    <i class="bx bx-menu" id="menu-icon"></i>
 
-                <p>I AM 14 YEAR OLD BOY. BORN ON 10th JULY 2011. NOW I STUDY IN CLASS 8th CBSC AT ORCHID PUBLIC SCHOOL .
-                    <br>
-                    I LOVE TECHNOLOGY AND ANIMALS ESPECIALLY DOG . I AM A GOOD BOWLER AND DECENT BATTING.
-                </p>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">services</a>
+      <a href="#projects">Projects</a>
+      <a href="#Contact">Contact</a>
+    </nav>
+  </header>
 
-            </td>
+  <!-- home section -->
 
-        </tr>
-        <!-- third row -->
-        <tr>
-            <td id="scroll-2" class="third-row" colspan="3">
-                <div class="main">
-                    <div><a href="./chessopen.html"><img class="PROJECTS" src="./royal4.jpg" height="150" width="150" ></a></div>
-                    &nbsp &nbsp &nbsp<div><a href="./webs.html"><img class="PROJECTS"  src="./web.jpg" height="150" width="150"
-                                alt=""></a></div>
-                    &nbsp &nbsp &nbsp<div><a href="./whatsapp.html"><img class  ="PROJECTS"  src="https://yt3.googleusercontent.com/kII-e8ZvEK4jO8Vf7zglzkfzaH093Eiyz59KXzFfp0AfXVw0Ij9Ckp5aDoHSVplmP9y3roBePQ=s900-c-k-c0x00ffffff-no-rj" height="150" width="150"
-                                alt=""></div></a>
+  <section class="home" id="home">
+    <div class="home-img">
+      <img class="my-image" src="./myimg.jpg" alt="Profile image">
+    </div>
+
+    <div class="home-content">
+      <h3>Hello, Myself</h3>
+      <h1>Rudra Wankhede</h1>
+      <h3>And i'm a <span class="multiple-text">Web Developer</span></h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque deserunt magni nihil labore accusamus sint
+        eum reprehenderit quam quod alias minima sequi est voluptas illum voluptates quisquam, expedita dicta.
+      </p>
+      <!-- <div class="social-media">
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-github'></i></a>
+        <a href="#"></a>
+      </div>
+      <a class="btn" href="#btn">Download CV</a> -->
 
 
-                </div>
-            </td>
-        </tr>
-        <!-- fourth row -->
-        <tr>
-            <td id="scroll-3" class="fourth-row" colspan="4">
-                <h1 style="text-align: center;">EXPERIENCE</h1>
-                <h2>HTML:- 100%</h2>
-                <h2>CSS:- 100%</h2>
-        </tr>
-        <!-- fifth row -->
-        <tr>
-            <td style="text-align: center; object-fit: cover;" class="fifth-row"><a 
-                    href="https://join.skype.com/invite/tE4ib6Co3tq6">SKYPE</a></td>
-            <td style="text-align: center;" class="fifth-row"><a 
-                    href="https://github.com/Rudra1007/rudra_full_stack_developer">Github ID</a></td>
-            <td class="fifth-row">blank</td>
-        </tr>
 
-    </table>
+    </div>
+  </section>
+  <!-- About section -->
+  <div id="about">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="about-col1">
+          <img src="./myimg.jpg">
+        </div>
+
+        <div class="about-col2">
+          <h1 class="sub-title">About Me</h1>
+          <p style="margin-right: 50%; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Beataeab asperiores,
+            incidunt nulla quod dolores ad quaerat voluptatem dicta quibusdam eveniet. Hic, facilis officia eum
+            reprehenderit sequi quia necessitatibus facere.</p>
+
+          <div class="tab-title">
+            <p class="tab-links active-link">Skills</p>
+            <p class="tab-links">Experience</p>
+            <p class="tab-links">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul style="text-align: left;">
+              <li><span>UI/UX</span><br>Designing Webs/App interfaces</li>
+              <li><span>Web Development</span><br>Web App Development</li>
+              <li><span>App Development</span><br>Building Android/IOS Apps</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul style="text-align: left;">
+              <li><span>2024 - Current</span><br>IT Traning at Enjoy Programming</li>
+              <li><span>2015 - Current</span><br>Primary Education at Orchid Public School</li>
+              <li><span>2014 - 2015</span><br>Nursery Schoot at Arvind indo Public school</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul style="text-align: left;">
+              <li><span>Learning</span><br>IT Traning From Enjoy Programming</li>
+              <li><span>2024</span><br>7th Standard From Orchid Public School</li>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- projects -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae recusandae ad assumenda cumque corrupti
+            dicta quas consectetur suscipit, soluta, consequatur ipsam eum, eveniet placeat molestias sed. Laboriosam
+            molestias facere doloribus.</p>
+          <a href="#">Learn more</a>
+        </div>
+
+        <div>
+          <i class='bx bxs-crop'></i>
+          <h2>UI/UX Design</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae recusandae ad assumenda cumque corrupti
+            dicta quas consectetur suscipit, soluta, consequatur ipsam eum, eveniet placeat molestias sed. Laboriosam
+            molestias facere doloribus.</p>
+          <a href="#">Learn more</a>
+        </div>
+
+        <div>
+          <h2>App Design</h2>
+          <i class="fa-brands fa-app-store"></i>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae recusandae ad assumenda cumque corrupti
+            dicta quas consectetur suscipit, soluta, consequatur ipsam eum, eveniet placeat molestias sed. Laboriosam
+            molestias facere doloribus.</p>
+          <a href="#">Learn more</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- projects section -->
+  <div id="projects">
+
+    <div class="container">
+      <div class="sub-title">MyProjects</div>
+      <div class="work-list">
+        <div class="work">
+          <a href="./chessopen.html"><img src="./royal4.jpg" alt="">
+            <div class="layer">
+              <h3>Royal Gambit</h3>
+              <p>Chess is an abstract strategy game that involves no hidden information and no elements of chance.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="work">
+          <a href="./whatsapp.html"><img
+              src="https://yt3.googleusercontent.com/kII-e8ZvEK4jO8Vf7zglzkfzaH093Eiyz59KXzFfp0AfXVw0Ij9Ckp5aDoHSVplmP9y3roBePQ=s900-c-k-c0x00ffffff-no-rj"
+              alt="">
+            <div class="layer">
+              <h3>Whatsapp</h3>
+              <p>WhatsApp (officially WhatsApp Messenger) is an instant messaging (IM) and voice-over-IP (VoIP) service
+                owned by technology conglomerate Meta.</p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="work">
+          <a href="./webs.html"><img src="./web.jpg" alt="">
+            <div class="layer">
+              <h3>The Webs</h3>
+              <p>The Webs is a software system that provides hyperlinks to web pages and other relevant information on
+                the Web in response.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="work">
+          <a href="./calculator.html"><img
+              src="data:image/png;base64,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"
+              alt="">
+            <div class="layer">
+              <h3>Calculator</h3>
+              <p>An electronic calculator is typically a portable electronic device used to perform calculations,
+                ranging from basic arithmetic to complex mathematics.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">ContactMe</h1>
+          <p> <i class="fas fa-paper-plane"></i> rudrawankhede1007@gmail.com</p>
+          <p> <i class="fa-solid fa-phone"></i> 001424522</p>
+          <div class="social-icon">
+            <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+            <a href="linkedin.com/in/rudra-wankhede-709333314"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Rudra1007/rudra_full_stack_developer"><i class='bx bxl-github'></i></a>
+            <a href="live:.cid.98beb2c6333ec9f9"><i class='bx bxl-skype'></i></a>
+          </div>
+          <a href="./index.html" download class="btn btn2">Dowload CV</a>
+        </div>
+        <div class="contact-right">
+          <form action="">
+            <input type="text" name="" placeholder="your name" required>
+            <input type="email" name="Email" placeholder="your email" required>
+            <textarea name="Message" rows="6" placeholder="your Messag"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
