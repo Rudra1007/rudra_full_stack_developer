@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+    body {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+    main {
+        background-color: #000000;
+        padding: 20px;
+        height: 500px;
+        width: 445px;
+        border: 2px solid #e5e5e5;
+    }
+
+    .display-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .text-display {
+        height: 55px;
+        width: 420px;
+        background-color: #ffafaf;
+        border: #d2d2d2;
+        outline: #d2d2d2;
+        resize: none;
+        text-align: right;
+        padding-top: 5vh;
+        font-size: 25px;
+        padding-right: 20px;
+    }
+
+    button {
+        height: 85px;
+        width: 145px;
+        margin-top: 30px;
+        border: 2px solid #dadada;
+    }
+
+    button:hover {
+        background-color: #e5e5e5;
+    }
+
+    input {
+        height: 70px;
+        width: 95%;
+        border: #d2d2d2;
+        padding-left: 20px;
+        outline: #d2d2d2;
+        background-color: rgb(169, 217, 143);
+    }
+</style>
+<script>
+    let x = 0;
+    function firstOutput() {
+        x += 10
+        document.getElementById("display").innerHTML = 10;
+    }
+
+    function secondOutput() {
+        x += 20
+        document.getElementById("display").innerHTML = 20;
+    }
+
+    function result() {
+        document.getElementById("display").innerHTML = x;
+
+    }
+
+
+</script>
+
+<body>
+
+    <main>
+        <div>
+
+            <!-- Display Box -->
+            <div class="display-box">
+                <textarea id="display" class="text-display" readonly type="text"></textarea>
+            </div>
+
+            <br>
+
+            <!-- Input -->
+            <div>
+                <button onclick="firstOutput()" id="display" type="text">10</button>
+
+            </div>
+
+            <div>
+                <button onclick="secondOutput()" id="display" type="text">20</button>
+
+            </div>
+
+            <!-- Buttons -->
+            <div>
+                <button onclick="result()">Result</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

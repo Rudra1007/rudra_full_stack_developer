@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+    body {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+    main {
+        background-color: #000000;
+        padding: 20px;
+        height: 310px;
+        width: 445px;
+        border: 2px solid #e5e5e5;
+    }
+
+    .display-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .text-display {
+        height: 55px;
+        width: 420px;
+        background-color: #ffafaf;
+        border: #d2d2d2;
+        outline: #d2d2d2;
+        resize: none;
+        text-align: right;
+        padding-top: 5vh;
+        font-size: 25px;
+        padding-right: 20px;
+    }
+
+    button {
+        height: 85px;
+        width: 145px;
+        margin-top: 30px;
+        border: 2px solid #dadada;
+    }
+
+    button:hover {
+        background-color: #e5e5e5;
+    }
+
+    input {
+        height: 70px;
+        width: 95%;
+        border: #d2d2d2;
+        padding-left: 20px;
+        outline: #d2d2d2;
+        background-color: rgb(169, 217, 143);
+    }
+</style>
+<script>
+
+    // Output using Alert
+    // function firstOutput() {
+    //     let y = document.getElementById("input").value
+    //     y = Number(y)
+    //     const z = 10 + y
+    //     document.getElementById("display").innerHTML = z
+    //     alert(y)
+    // }
+
+
+
+
+
+    // // Output using Html
+    // function secondOutput() {
+    //     const x = document.getElementById('input').value
+    //     document.getElementById("display").innerHTML = x
+    // }
+
+
+
+
+
+
+    // // Output using Console
+    // function thirdOutput() {
+    //     const x = 10
+    //     console.log(x)
+    // }
+
+
+
+
+    // add 
+    function firstOutput() {
+        let y = document.getElementById("input").value
+        y = Number(y)
+        const z = Number(x) + Number(y)
+        document.getElementById("display").innerHTML = z;
+    }
+
+
+
+
+
+    // number swipe
+    // function swipeANumber() {
+    //     let x = 100;
+    //     let y = 200;
+
+
+    //    let z = y;
+    //    y = x;
+    //    x = z;
+    //     console.log("the value of x", x);
+    //     console.log("the value of y", y);
+
+    // }
+
+</script>
+
+<body>
+
+    <main>
+        <div>
+
+            <!-- Display Box -->
+            <div class="display-box">
+                <textarea id="display" class="text-display" readonly type="text"></textarea>
+            </div>
+
+            <br>
+
+            <!-- Input -->
+            <div>
+                <input id="input" type="text">
+            </div>
+
+            <!-- Buttons -->
+            <div>
+                <button onclick="firstOutput()">Data type</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

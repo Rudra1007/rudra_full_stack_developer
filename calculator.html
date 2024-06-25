@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -5,13 +6,13 @@
         .main {
             height: 90vh;
             width: 40vw;
-            background-color: black;
             display: grid;
             grid-template-rows: 1fr 3fr;
-            padding: 10px;
+
             margin-left: 30%;
-            border-radius: 2%;
-            margin-top: 60px;
+
+            margin-top: 0px;
+
         }
 
         .second-box {
@@ -26,9 +27,9 @@
         button {
             height: 100%;
             width: 100%;
-            padding: 0%;
+
             font-size: 24px;
-            border-radius: 5px;
+
 
 
 
@@ -40,62 +41,104 @@
             height: 19%;
             width: 100%;
 
-            margin-top: 10px;
+
         }
 
 
 
 
         .number {
-            background-color: #fff;
+            background-color: #EEEEEE;
             color: #333;
+            font-size: 35px;
 
         }
 
         .operator {
             background-color: #FF8911;
             color: #fff;
+            font-size: 35px;
         }
 
         .operator-top {
             background-color: #464646;
             color: #fff;
+            font-size: 35px;
         }
     </style>
+    <script>
+        function buttonclick(bot) {
+           
+            document.getElementById("resultbox").innerHTML = bot;
+            console.log("buttonclick is logged",bot)
+        }
+        function clearText() {
+            console.log("clearText is logged")
+            document.getElementById("resultbox").innerHTML = "";
+        }
+        function thirdOutput(){
+            alert("you type even number")
+        }
+
+
+
+    </script>
 
 </head>
 
 <body>
-    <!-- main html code and UI of calculator -->
-    <main class="main">
 
-        <div style="background-color: #686D76; height: 10vw; width: 40vw;">
+    <main class="main">
+        <!-- dispaly -->
+
+        <div id="resultbox"
+            style=" background-color: #C7C8CC; height: 10vw; width: 40vw; margin-top: 18px;  font-size: 40px; text-align: end; text-align: end;">
         </div>
-        </div>
-        <!-- calculator  -->
+        <!-- buttons -->
+
         <div style="height: 100%; width: 100%;">
             <div class="second-box">
-                <div><button class="operator-top">AC</button></div>
+                <div><button class="operator-top" onclick="clearText()">AC</button></div>
+
                 <div><button class="operator-top">+/-</button></div>
+
                 <div><button class="operator-top">%</button></div>
-                <div><button class="operator">/</button></div>
-                <div><button class="number">7</button></div>
-                <div><button class="number">8</button></div>
-                <div><button class="number">9</button></div>
-                <div><button class="operator">X</button></div>
-                <div><button class="number">4</button></div>
-                <div><button class="number">5</button></div>
-                <div><button class="number">6</button></div>
+
+                <div><button class="operator">÷</button></div>
+
+                <div><button class="number" onclick="buttonclick(7)">7</button></div>
+
+                <div><button class="number" onclick="buttonclick(8)">8</button></div>
+
+                <div><button class="number" onclick="buttonclick(9)">9</button></div>
+
+                <div><button class="operator">x</button></div>
+
+                <div><button class="number" onclick="buttonclick(4)">4</button></div>
+
+                <div><button class="number" onclick="buttonclick(5)">5</button></div>
+
+                <div><button class="number" onclick="buttonclick(6)">6</button></div>
+
                 <div><button class="operator">-</button></div>
-                <div><button class="number">1</button></div>
-                <div><button class="number">2</button></div>
-                <div><button class="number">3</button></div>
-                <div><button class="operator">+</button></div>
+
+                <div><button class="number" onclick="buttonclick(1)">1</button></div>
+
+                <div><button class="number" onclick="buttonclick(2)">2</button></div>
+
+                <div><button class="number" onclick="buttonclick(3)">3</button></div>
+
+                <div><button class="operator" onclick="buttonclick()">+</button></div>
+
             </div>
+            <!-- last row -->
             <div class="last-row">
-                <div><button class="number">0</button></div>
+                <div><button class="number" onclick="buttonclick(0)">0</button></div>
+
                 <div><button class="number">.</button></div>
+
                 <div><button class="operator">=</button></div>
+
             </div>
         </div>
 

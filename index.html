@@ -105,6 +105,12 @@
       color: white;
     }
 
+    ul{
+      display: flex;
+      flex-direction: row;
+    }
+
+   
 
 
 
@@ -124,6 +130,7 @@
       cursor: pointer;
       animation: floatImage 4s ease-in-out infinite;
       transition: 0.4s ease;
+      height: 60vh;
     }
 
     .home-img img:hover {
@@ -306,6 +313,281 @@
     }
 
 
+    .wheel-and-hamster {
+  --dur: 1s;
+  position: relative;
+  width: 12em;
+  height: 12em;
+  font-size: 14px;
+}
+
+.wheel,
+.hamster,
+.hamster div,
+.spoke {
+  position: absolute;
+}
+
+.wheel,
+.spoke {
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
+  z-index: 2;
+}
+
+.hamster {
+  animation: hamster var(--dur) ease-in-out infinite;
+  top: 50%;
+  left: calc(50% - 3.5em);
+  width: 7em;
+  height: 3.75em;
+  transform: rotate(4deg) translate(-0.8em,1.85em);
+  transform-origin: 50% 0;
+  z-index: 1;
+}
+
+.hamster__head {
+  animation: hamsterHead var(--dur) ease-in-out infinite;
+  background: hsl(30,90%,55%);
+  border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
+  box-shadow: 0 -0.25em 0 hsl(30,90%,80%) inset,
+		0.75em -1.55em 0 hsl(30,90%,90%) inset;
+  top: 0;
+  left: -2em;
+  width: 2.75em;
+  height: 2.5em;
+  transform-origin: 100% 50%;
+}
+
+.hamster__ear {
+  animation: hamsterEar var(--dur) ease-in-out infinite;
+  background: hsl(0,90%,85%);
+  border-radius: 50%;
+  box-shadow: -0.25em 0 hsl(30,90%,55%) inset;
+  top: -0.25em;
+  right: -0.25em;
+  width: 0.75em;
+  height: 0.75em;
+  transform-origin: 50% 75%;
+}
+
+.hamster__eye {
+  animation: hamsterEye var(--dur) linear infinite;
+  background-color: hsl(0,0%,0%);
+  border-radius: 50%;
+  top: 0.375em;
+  left: 1.25em;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.hamster__nose {
+  background: hsl(0,90%,75%);
+  border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
+  top: 0.75em;
+  left: 0;
+  width: 0.2em;
+  height: 0.25em;
+}
+
+.hamster__body {
+  animation: hamsterBody var(--dur) ease-in-out infinite;
+  background: hsl(30,90%,90%);
+  border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
+  box-shadow: 0.1em 0.75em 0 hsl(30,90%,55%) inset,
+		0.15em -0.5em 0 hsl(30,90%,80%) inset;
+  top: 0.25em;
+  left: 2em;
+  width: 4.5em;
+  height: 3em;
+  transform-origin: 17% 50%;
+  transform-style: preserve-3d;
+}
+
+.hamster__limb--fr,
+.hamster__limb--fl {
+  clip-path: polygon(0 0,100% 0,70% 80%,60% 100%,0% 100%,40% 80%);
+  top: 2em;
+  left: 0.5em;
+  width: 1em;
+  height: 1.5em;
+  transform-origin: 50% 0;
+}
+
+.hamster__limb--fr {
+  animation: hamsterFRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,80%) 80%,hsl(0,90%,75%) 80%);
+  transform: rotate(15deg) translateZ(-1px);
+}
+
+.hamster__limb--fl {
+  animation: hamsterFLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,90%) 80%,hsl(0,90%,85%) 80%);
+  transform: rotate(15deg);
+}
+
+.hamster__limb--br,
+.hamster__limb--bl {
+  border-radius: 0.75em 0.75em 0 0;
+  clip-path: polygon(0 0,100% 0,100% 30%,70% 90%,70% 100%,30% 100%,40% 90%,0% 30%);
+  top: 1em;
+  left: 2.8em;
+  width: 1.5em;
+  height: 2.5em;
+  transform-origin: 50% 30%;
+}
+
+.hamster__limb--br {
+  animation: hamsterBRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,80%) 90%,hsl(0,90%,75%) 90%);
+  transform: rotate(-25deg) translateZ(-1px);
+}
+
+.hamster__limb--bl {
+  animation: hamsterBLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,90%) 90%,hsl(0,90%,85%) 90%);
+  transform: rotate(-25deg);
+}
+
+.hamster__tail {
+  animation: hamsterTail var(--dur) linear infinite;
+  background: hsl(0,90%,85%);
+  border-radius: 0.25em 50% 50% 0.25em;
+  box-shadow: 0 -0.2em 0 hsl(0,90%,75%) inset;
+  top: 1.5em;
+  right: -0.5em;
+  width: 1em;
+  height: 0.5em;
+  transform: rotate(30deg) translateZ(-1px);
+  transform-origin: 0.25em 0.25em;
+}
+
+.spoke {
+  animation: spoke var(--dur) linear infinite;
+  background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
+		linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
+}
+
+/* Animations */
+@keyframes hamster {
+  from, to {
+    transform: rotate(4deg) translate(-0.8em,1.85em);
+  }
+
+  50% {
+    transform: rotate(0) translate(-0.8em,1.85em);
+  }
+}
+
+@keyframes hamsterHead {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes hamsterEye {
+  from, 90%, to {
+    transform: scaleY(1);
+  }
+
+  95% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes hamsterEar {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes hamsterBody {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes hamsterFRLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(50deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-30deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterFLLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(-30deg);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes hamsterBRLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(-60deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(20deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterBLLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(20deg);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes hamsterTail {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(30deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(10deg) translateZ(-1px);
+  }
+}
+
+@keyframes spoke {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-1turn);
+  }
+}
+
+ 
+
 
 
     /* services section code */
@@ -421,30 +703,30 @@
 
     /* contact section code */
 
-    .contact-left{
+    .contact-left {
       flex-basis: 35%;
     }
 
-    .contact-right{
+    .contact-right {
       flex-basis: 60%;
     }
 
-    .contact-left p{
+    .contact-left p {
       margin-top: 30px;
     }
 
-    .contact-left p i{
+    .contact-left p i {
       color: var(--main-colour);
       margin-right: 15px;
       font-size: 25px;
     }
 
-    .social-icon{
+    .social-icon {
       margin-top: 30px;
 
     }
 
-    .social-icon a{
+    .social-icon a {
       text-decoration: none;
       font-size: 30px;
       margin-right: 50px;
@@ -453,16 +735,97 @@
       transition: transform 0.5s;
     }
 
-    .social-icon a:hover{
+    .social-icon a:hover {
       color: var(--main-colour);
       transform: translateY(-5px);
     }
 
-    .btn.btn2{
+    .btn.btn2 {
       display: inline-block;
+      background-color: #ff004f;
     }
 
-    
+    .contact-right form{
+      width: 100%;
+    }
+
+    form input, form textarea{
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: #262626;
+      padding: 15px;
+      margin: 15px 0;
+      color: aliceblue;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+
+    form btn2{
+      padding: 14px 60px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .copyright{
+      width: 100%;
+      text-align: center;
+      padding: 25px 0;
+      background-color: #262626;
+      font-weight: 300;
+      margin-top: 20px;
+    }
+
+
+    /* css for small screen */
+    @media only screen and (max-width: 600px){
+      #header{
+        background-image: url(./myimg.jpg);
+      }
+      .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+      }
+      .header-texth1{
+        font-size: 30px;
+        
+      }
+
+      .sub-title{
+        font-size: 40px;
+      }
+
+      .about-col1, .about-col2{
+        flex-basis: 100%;
+      }
+
+      .about-col1{
+        margin-bottom: 30px;
+
+      }
+      .about-col2{
+        font-size: 14px;
+      }
+
+      .tab-links{
+        font-size: 16px;
+        margin-right: 30px;
+      }
+      .contact-left, .contact-right{
+        flex-basis: 100%;
+      }
+      .copyright{
+        font-size: 40px;
+      }
+    }
+
+
+
+
+
+
+   
   </style>
   <script src="https://kit.fontawesome.com/a69fbe4709.js" crossorigin="anonymous"></script>
 
@@ -477,11 +840,13 @@
     <i class="bx bx-menu" id="menu-icon"></i>
 
     <nav class="navbar">
+    
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">services</a>
       <a href="#projects">Projects</a>
-      <a href="#Contact">Contact</a>
+      <a href="#contact">Contact</a>
+     
     </nav>
   </header>
 
@@ -499,13 +864,13 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque deserunt magni nihil labore accusamus sint
         eum reprehenderit quam quod alias minima sequi est voluptas illum voluptates quisquam, expedita dicta.
       </p>
-      <!-- <div class="social-media">
-        <a href="#"><i class='bx bxl-linkedin'></i></a>
-        <a href="#"><i class='bx bxl-instagram'></i></a>
-        <a href="#"><i class='bx bxl-github'></i></a>
-        <a href="#"></a>
+      <div class="social-media">
+        <a href="linkedin.com/in/rudra-wankhede-709333314"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+        <a href="https://github.com/Rudra1007/rudra_full_stack_developer"><i class='bx bxl-github'></i></a>
+        <a href="https://join.skype.com/invite/tE4ib6Co3tq6"><i class='bx bxl-skype'></i></a>
       </div>
-      <a class="btn" href="#btn">Download CV</a> -->
+      <a class="btn" href="#btn">Download CV</a>
 
 
 
@@ -519,7 +884,8 @@
       <div class="row">
 
         <div class="about-col1">
-          <img src="./myimg.jpg">
+          <img
+            src="https://img.freepik.com/free-vector/hand-drawn-skeleton-cartoon-illustration_23-2150576015.jpg?size=338&ext=jpg&ga=GA1.1.1788614524.1718496000&semt=ais_user">
         </div>
 
         <div class="about-col2">
@@ -529,6 +895,29 @@
             incidunt nulla quod dolores ad quaerat voluptatem dicta quibusdam eveniet. Hic, facilis officia eum
             reprehenderit sequi quia necessitatibus facere.</p>
 
+            
+            <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+              <div class="wheel"></div>
+              <div class="hamster">
+                <div class="hamster__body">
+                  <div class="hamster__head">
+                    <div class="hamster__ear"></div>
+                    <div class="hamster__eye"></div>
+                    <div class="hamster__nose"></div>
+                  </div>
+                  <div class="hamster__limb hamster__limb--fr"></div>
+                  <div class="hamster__limb hamster__limb--fl"></div>
+                  <div class="hamster__limb hamster__limb--br"></div>
+                  <div class="hamster__limb hamster__limb--bl"></div>
+                  <div class="hamster__tail"></div>
+                </div>
+              </div>
+              <div class="spoke"></div>
+            </div>
+
+           
+  
+<!-- 
           <div class="tab-title">
             <p class="tab-links active-link">Skills</p>
             <p class="tab-links">Experience</p>
@@ -557,7 +946,7 @@
               <li><span>2024</span><br>7th Standard From Orchid Public School</li>
           </div>
 
-        </div>
+        </div> -->
 
       </div>
 
@@ -572,27 +961,26 @@
         <div>
           <i class="fa-solid fa-code"></i>
           <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae recusandae ad assumenda cumque corrupti
-            dicta quas consectetur suscipit, soluta, consequatur ipsam eum, eveniet placeat molestias sed. Laboriosam
-            molestias facere doloribus.</p>
+          <p>Web design involves creating the visual elements and layout of a website, while coding involves translating
+            these designs into a functional website using programming languages like HTML, CSS, and JavaScript.
+            Typically, dedicated web developers translate the designs to code.</p>
           <a href="#">Learn more</a>
         </div>
 
         <div>
           <i class='bx bxs-crop'></i>
           <h2>UI/UX Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae recusandae ad assumenda cumque corrupti
-            dicta quas consectetur suscipit, soluta, consequatur ipsam eum, eveniet placeat molestias sed. Laboriosam
-            molestias facere doloribus.</p>
+          <p>In digital design, user interface (UI) refers to the interactivity, look, and feel of a product screen or
+            web page, while user experience (UX) covers a user's overall experience with the product or website.</p>
           <a href="#">Learn more</a>
         </div>
 
         <div>
           <h2>App Design</h2>
           <i class="fa-brands fa-app-store"></i>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae recusandae ad assumenda cumque corrupti
-            dicta quas consectetur suscipit, soluta, consequatur ipsam eum, eveniet placeat molestias sed. Laboriosam
-            molestias facere doloribus.</p>
+          <p>App design is the look and feel of a mobile application. This includes all of the visual elements and
+            interactive elements that impact how the app functions. Mobile app design combines two concepts—UI and UX.
+          </p>
           <a href="#">Learn more</a>
         </div>
 
@@ -649,12 +1037,26 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 
   </div>
   </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
 
   <!-- Contact -->
   <div id="contact">
@@ -666,21 +1068,24 @@
           <p> <i class="fa-solid fa-phone"></i> 001424522</p>
           <div class="social-icon">
             <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
-            <a href="linkedin.com/in/rudra-wankhede-709333314"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.linkedin.com/in/rudra-wankhede-709333314"><i class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/Rudra1007/rudra_full_stack_developer"><i class='bx bxl-github'></i></a>
-            <a href="live:.cid.98beb2c6333ec9f9"><i class='bx bxl-skype'></i></a>
+            <a href="https://join.skype.com/invite/tE4ib6Co3tq6"><i class='bx bxl-skype'></i></a>
           </div>
-          <a href="./index.html" download class="btn btn2">Dowload CV</a>
+          <a href="gdfthfghgyj" download class="btn btn2">Dowload CV</a>
         </div>
         <div class="contact-right">
           <form action="">
             <input type="text" name="" placeholder="your name" required>
             <input type="email" name="Email" placeholder="your email" required>
             <textarea name="Message" rows="6" placeholder="your Messag"></textarea>
-            <button type="submit">Submit</button>
+            <button class="btn btn2" type="submit">Submit</button>
           </form>
         </div>
       </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright © Rudra. Made by Rudra Wankhede</p>
     </div>
   </div>
 
