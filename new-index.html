@@ -21,8 +21,9 @@
             padding: 0;
             background-color: var(--side-colour);
             scroll-behavior: smooth;
+            
         }
-
+       
 
         body {
             font-family: 'Arial', sans-serif;
@@ -84,15 +85,15 @@
 
 
         p {
-            color: #ff0000;
+            color: #ffffff;
             font-size: 16px;
             line-height: 1.8;
         }
 
 
         /* home css */
-        .intro{
-            margin-top: -330px;
+        .intro {
+            margin-top: -262px;
             text-align: left;
             margin-left: 6%;
         }
@@ -101,7 +102,7 @@
         .my-img {
             height: 60vh;
             width: 30vw;
-            margin-top: 50px;
+            margin-top: 60px;
             margin-left: 60%;
             border-radius: 20px;
 
@@ -145,7 +146,7 @@
             }
         }
 
-        i{
+        i {
             font-size: 20px;
             color: var(--main-colour);
         }
@@ -155,19 +156,35 @@
 
 
         /* about css */
-        #About{
+        #About {
             padding: 250px;
+            margin-bottom: 30%;
         }
 
-        .skeleton{
-            margin-left: -23%;
+        .skeleton {
+
             height: 50vh;
-            width: 40cw;
+            width: 20vw;
+            margin-left: -20%;
+            margin-top: 7%;
+
         }
 
-        .about-me-text{
-            margin-top: -40%;
+        .about-me-text {
+            margin-top: -5%;
             margin-left: 30%;
+            color: var(--main-colour);
+            font-size: 55px;
+        }
+
+        .skeleton:hover {
+            box-shadow: 0 0 25px var(--main-colour),
+                0 0 35px var(--main-colour),
+                0 0 45px var(--main-colour)
+        }
+
+        .education-skills{
+            margin-left: 20%;
             color: var(--main-colour);
         }
     </style>
@@ -177,8 +194,7 @@
     <!-- navbar code -->
     <div class="navbar">
         <a class="active" href="#home">Home</a>
-        <a  href="#About">About</a>
-        
+        <a href="#About">About</a>
         <a href="#Projects">Projects</a>
         <a href="#Contact">Contact</a>
     </div>
@@ -208,10 +224,14 @@
 
 
     <div id="About">
-
-        <img class="skeleton" src="./skeleton Background Removed.png" alt="">
         <h2 class="about-me-text">About Me</h2>
-
+        <img class="skeleton" src="./skeleton Background Removed.png" alt="">
+        <p style="margin-left: 20%; margin-top: -38%;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus vero architecto aliquid modi. Libero
+            beatae nemo maxime totam quisquam necessitatibus, animi adipisci minima autem earum omnis, quasi temporibus
+            reiciendis sit.</p>
+            <br>
+            <h3 onclick="" class="education-skills">Education</h3> <br>
+            <h3 onclick="" class="education-skills">Skills</h3>
     </div>
 
 
