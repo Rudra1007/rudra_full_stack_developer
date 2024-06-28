@@ -24,7 +24,7 @@
     main {
         background-color: #000000;
         padding: 20px;
-        height: 310px;
+        height: 510px;
         width: 445px;
         border: 2px solid #e5e5e5;
     }
@@ -61,10 +61,15 @@
     input {
         height: 70px;
         width: 95%;
-        border: #d2d2d2;
+        border: #d2d2d2 10px;
         padding-left: 20px;
         outline: #d2d2d2;
         background-color: rgb(169, 217, 143);
+        padding: 10px;
+    }
+
+    h2{
+        color: #dadada;
     }
 </style>
 <script>
@@ -111,6 +116,48 @@
     }
 
 
+    // relitional operators
+    function relationalOperators(){
+        let x = Number(document.getElementById("input").value);
+        let y = Number(document.getElementById("inputTwo").value);
+
+        let z = x > y;
+
+        document.getElementById("display").innerHTML = "x is bigger than y ==>" + z;
+
+    }
+
+    // compare two number
+
+    function compareTwoNumber(){
+        let x = Number(document.getElementById("input").value);
+        let y = Number(document.getElementById("inputTwo").value);
+        let v = Number(document.getElementById("inputThree").value);
+        
+        let z = x > y;
+        document.getElementById("display").innerHTML = "x is greater than y ===>" + z;
+
+
+    }
+    function compareTwoNumber(){
+        let x = Number(document.getElementById("input").value);
+        let y = Number(document.getElementById("inputTwo").value);
+        let v = Number(document.getElementById("inputThree").value);
+        
+        let a = y > x;
+        document.getElementById("display").innerHTML = "y is greater than X ===>" + a;
+    }
+
+    function compareTwoNumber(){
+        let x = Number(document.getElementById("input").value);
+        let y = Number(document.getElementById("inputTwo").value);
+        let v = Number(document.getElementById("inputThree").value);
+        
+        let b = v > x;
+        document.getElementById("display").innerHTML = "z is greater than X ===>" + b;
+    }
+
+
 
 
 
@@ -144,12 +191,25 @@
 
             <!-- Input -->
             <div>
-                <input id="input" type="text">
+                <h2>x :</h2>
+                <input id="input" type="text"> 
             </div>
+
+            <div>
+                <h2>y : </h2>
+                <input id="inputTwo" type="text">
+            </div>
+
+            <div>
+                <h2>z :</h2>
+                <input id="inputThree" type="text">
+            </div>
+
+
 
             <!-- Buttons -->
             <div>
-                <button onclick="firstOutput()">Data type</button>
+                <button onclick="compareTwoNumber()">Compare</button>
             </div>
 
         </div>
