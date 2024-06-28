@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudra Wankhede</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *:root {
+            --main-colour: #FEE715;
+            --side-colour: #101820;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: var(--side-colour);
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        /* navbar css */
+        .navbar {
+            overflow: hidden;
+            background-color: var(--main-colour);
+        }
+
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+
+        .navbar a:hover {
+            background-color: yellowgreen;
+        }
+
+
+        .navbar a.active {
+            background-color: var(--main-colour);
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+
+        .content {
+            padding: 20px;
+        }
+
+
+        h2 {
+
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+
+        p {
+            color: #ff0000;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+
+        /* home css */
+        .intro{
+            margin-top: -330px;
+            text-align: left;
+            margin-left: 6%;
+        }
+
+
+        .my-img {
+            height: 60vh;
+            width: 30vw;
+            margin-top: 50px;
+            margin-left: 60%;
+            border-radius: 20px;
+
+
+        }
+
+        .my-img {
+            filter: drop-shadow(5px 5px 10px #FEE715);
+        }
+
+        span {
+            color: var(--main-colour);
+        }
+
+        span::before {
+            content: "Rudra";
+            animation: animate infinite 10s;
+            padding-left: 10px;
+        }
+
+        @keyframes animate {
+
+            20% {
+                content: "Full Stack Developer";
+            }
+
+            25% {
+                content: "UI/UX Designer";
+            }
+
+            50% {
+                content: "App Designer";
+            }
+
+            75% {
+                content: "Web Desingner";
+            }
+
+            100% {
+                content: "Graphic Desingner";
+            }
+        }
+
+        i{
+            font-size: 20px;
+            color: var(--main-colour);
+        }
+
+
+
+
+
+        /* about css */
+        #About{
+            padding: 250px;
+        }
+
+        .skeleton{
+            margin-left: -23%;
+            height: 50vh;
+            width: 40cw;
+        }
+
+        .about-me-text{
+            margin-top: -40%;
+            margin-left: 30%;
+            color: var(--main-colour);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar code -->
+    <div class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a  href="#About">About</a>
+        
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
+    </div>
+
+
+    <!-- home section -->
+
+    <!-- my img -->
+    <div>
+        <img class="my-img" src="./my img background removed.png" alt="">
+    </div>
+
+
+    <!-- intro -->
+    <div class="intro">
+        <h2>Hello, MySelf</h2>
+        <h1>Rudra Wankhede </h1>
+        <h1>I am <span></span></h1>
+        <br>
+        <a href="https://github.com/Rudra1007/rudra_full_stack_developer"><i class='bx bxl-github'></i></a>
+        <a href="https://join.skype.com/invite/tE4ib6Co3tq6"><i class='bx bxl-skype'></i></a>
+        <a href="https://stackoverflow.com/"><i class='bx bxl-stack-overflow'></i></a>
+        <a href="https://www.linkedin.com/in/rudra-wankhede-709333314"><i class='bx bxl-linkedin'></i></a>
+    </div>
+    <br>
+    <br>
+
+
+    <div id="About">
+
+        <img class="skeleton" src="./skeleton Background Removed.png" alt="">
+        <h2 class="about-me-text">About Me</h2>
+
+    </div>
+
+
+
+</body>
+
+</html>
