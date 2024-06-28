@@ -21,9 +21,9 @@
             padding: 0;
             background-color: var(--side-colour);
             scroll-behavior: smooth;
-            
+
         }
-       
+
 
         body {
             font-family: 'Arial', sans-serif;
@@ -39,6 +39,7 @@
         .navbar {
             overflow: hidden;
             background-color: var(--main-colour);
+            position: fixed;
         }
 
 
@@ -183,20 +184,35 @@
                 0 0 45px var(--main-colour)
         }
 
-        .education-skills{
+        .education-skills {
             margin-left: 20%;
             color: var(--main-colour);
         }
+
+
+        /* project */
     </style>
+    <script>
+        function Education(){
+           let y = document.getElementById("click").innerHTML = "Education";
+           alert ("Education Current==> 8th std")
+        }
+        function Skills(){
+           let x = document.getElementById("clickOne").innerHTML = "Skills";
+           alert ("UI/UX Design / Web designer / App designer / Full Stack Developer")
+        }
+
+    </script>
 </head>
 
 <body>
     <!-- navbar code -->
     <div class="navbar">
-        <a class="active" href="#home">Home</a>
-        <a href="#About">About</a>
+        <a href="#home">Home</a>
         <a href="#Projects">Projects</a>
+        <a href="#About">About</a>
         <a href="#Contact">Contact</a>
+        <h1>Rudra Wankhede</h1>
     </div>
 
 
@@ -209,7 +225,7 @@
 
 
     <!-- intro -->
-    <div class="intro">
+    <div class="intro" id="home">
         <h2>Hello, MySelf</h2>
         <h1>Rudra Wankhede </h1>
         <h1>I am <span></span></h1>
@@ -223,15 +239,16 @@
     <br>
 
 
+    <!-- about -->
     <div id="About">
         <h2 class="about-me-text">About Me</h2>
         <img class="skeleton" src="./skeleton Background Removed.png" alt="">
-        <p style="margin-left: 20%; margin-top: -38%;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus vero architecto aliquid modi. Libero
-            beatae nemo maxime totam quisquam necessitatibus, animi adipisci minima autem earum omnis, quasi temporibus
-            reiciendis sit.</p>
-            <br>
-            <h3 onclick="" class="education-skills">Education</h3> <br>
-            <h3 onclick="" class="education-skills">Skills</h3>
+        <p style="margin-left: 20%; margin-top: -38%;">I AM 14 YEAR OLD BOY. BORN ON 10th JULY 2011. NOW I STUDY IN
+            CLASS 8th CBSC AT ORCHID PUBLIC SCHOOL .
+            I LOVE TECHNOLOGY AND ANIMALS ESPECIALLY DOG . I AM A GOOD BOWLER AND DECENT BATTING.</p>
+        <br>
+        <h3 id="click" onclick="Education()" class="education-skills">Education</h3> <br>
+        <h3 id="clickOne" onclick="Skills()" class="education-skills">Skills</h3>
     </div>
 
 
