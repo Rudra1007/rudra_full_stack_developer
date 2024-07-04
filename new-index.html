@@ -21,7 +21,7 @@
             padding: 0;
             background-color: var(--side-colour);
             scroll-behavior: smooth;
-            cursor: pointer;
+
             gap: 0;
 
         }
@@ -92,13 +92,13 @@
             font-size: 16px;
             line-height: 1.8;
         }
-       
+
 
         .navName {
-            
+
             font-size: 30px;
             color: var(--main-colour);
-            
+
         }
 
 
@@ -202,75 +202,126 @@
 
 
         /* project */
-        #Projects{
+        #Projects {
             margin-top: -30%;
+            padding: 0px 0px 300px;
+
         }
 
         #portfilio {
-      padding: 50px 0;
-    }
-    .sub-title{
-        font-size: 55px;
-        color: var(--main-colour);
-        margin-left: 40%;
-        font-weight: 700;
-    }
+            padding: 50px 0;
+        }
 
-    .work-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-gap: 40px;
-      margin-top: 50px;
-    }
+        .sub-title {
+            font-size: 55px;
+            color: var(--main-colour);
+            margin-left: 40%;
+            font-weight: 700;
+        }
 
-    .work {
-      border-radius: 10px;
-      position: relative;
-      overflow: hidden;
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
 
-    }
+        .work {
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
 
-    .work img {
-      width: 25vw;
-      border-radius: 10px;
-      display: block;
-      transition: transform 0.5s;
-    }
+        }
 
-    .layer {
-      width: 100%;
-      height: 0;
-      background: linear-gradient(rgba(0, 0, 0, 0.6), #007f73);
-      border-radius: 10px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 0 40px;
-      text-align: center;
-      font-size: 14px;
-      transition: height 0.5s;
-    }
+        .work img {
+            width: 25vw;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+        }
 
-    .layer h3 {
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), #FEE715);
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            font-size: 14px;
+            transition: height 0.5s;
+        }
 
-    .work:hover img {
-      transform: scale(1.1);
+        .layer h3 {
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
 
-    }
+        .work:hover img {
+            transform: scale(1.1);
 
-    .work:hover .layer {
-      height: 100%;
-    }
-        
-       
+        }
+
+        .work:hover .layer {
+            height: 100%;
+        }
+
+        /* Contact Section */
+        #Contact {
+            margin-bottom: -70%;
+            margin-top: -15%
+        }
+
+        .Connect {
+            font-size: 60px;
+            color: var(--main-colour);
+            margin-left: 40%;
+            font-weight: 700;
+            margin-top: 10%;
+        }
+
+        #Contact i {
+            font-size: 50px;
+            padding: 0px 0px 0px 150px;
+
+            color: white;
+        }
+
+        .icon {
+            display: flex;
+            flex-direction: row;
+            margin-left: 8.5%;
+        }
+
+        .Alias {
+            margin-left: 55%;
+            width: 225px;
+            height: 30px;
+        }
+
+        .form {
+            margin-right: 40%;
+        }
+
+        .ContactNo {
+            margin-right: -30%;
+            width: 225px;
+            height: 30px;
+        }
+
+        .Message {
+            margin-left: -20%;
+            margin-bottom: -30%;
+            color: white;
+
+        }
     </style>
     <script>
         function Education() {
@@ -281,6 +332,11 @@
             let x = document.getElementById("clickOne").innerHTML = "Skills";
             alert("UI/UX Design / Web designer / App designer / Full Stack Developer")
         }
+        function Skills() {
+            let x = document.getElementById("clickTwo").innerHTML = "Experience";
+            alert("HTML--80%  CSS--70%    Java Script--40%")
+        }
+
 
     </script>
 </head>
@@ -291,7 +347,7 @@
         <a href="#home">Home</a>
         <a href="#About">About</a>
         <a href="#Projects">Projects</a>
-        <a href="#Contact">Contact</a>
+        <a href="#Contact">Connect Me</a>
         <h1 class="navName">Rudra Wankhede</h1>
     </div>
 
@@ -328,68 +384,97 @@
             I LOVE TECHNOLOGY AND ANIMALS ESPECIALLY DOG . I AM A GOOD BOWLER AND DECENT BATTING.</p>
         <br>
         <h3 id="click" onclick="Education()" class="education-skills">Education</h3> <br>
-        <h3 id="clickOne" onclick="Skills()" class="education-skills">Skills</h3>
+        <h3 id="clickOne" onclick="Skills()" class="education-skills">Skills</h3> <br>
+        <h3 id="clickTwo" onclick="Experience()" class="education-skills">Experience</h3>
     </div>
 
 
     <!-- projects -->
-    
+
     <div id="Projects">
 
         <div class="container">
-          <div class="sub-title">MyWork</div>
-          <div class="work-list">
-            <div class="work">
-              <a href="./chessopen.html"><img src="./royal gambit.jpg   " alt="">
-                <div class="layer">
-                  <h3>Royal Gambit</h3>
-                  <p>Chess is an abstract strategy game that involves no hidden information and no elements of chance.</p>
-                </div>
-              </a>
-            </div>
-    
-            <div class="work">
-              <a href="./whatsapp.html"><img
-                  src="./whatsappppppp.jpg"
-                  alt="">
-                <div class="layer">
-                  <h3>Whatsapp</h3>
-                  <p>WhatsApp (officially WhatsApp Messenger) is an instant messaging (IM) and voice-over-IP (VoIP) service
-                    owned by technology conglomerate Meta.</p>
-                </div>
-              </a>
-            </div>
-    
-    
-            <div class="work">
-              <a href="./webs.html"><img src="./website.jpg" alt="">
-                <div class="layer">
-                  <h3>The Webs</h3>
-                  <p>The Webs is a software system that provides hyperlinks to web pages and other relevant information on
-                    the Web in response.</p>
-                </div>
-              </a>
-            </div>
-    
-            <div class="work">
-              <a href="./calculator.html"><img
-                  src="./calculator.jpg"
-                  alt="">
-                <div class="layer">
-                  <h3>Calculator</h3>
-                  <p>An electronic calculator is typically a portable electronic device used to perform calculations,
-                    ranging from basic arithmetic to complex mathematics.</p>
-              </a>
-            </div>
-          </div>
-        </div>
-    
-      </div>
-    
-      </div>
-      </div>
-      </div>
+            <div class="sub-title">MyWork</div>
+            <div class="work-list">
+                <div class="work">
+                    <a href="./chessopen.html"><img src="./royal gambit.jpg   " alt="">
+                        <div class="layer">
+                            <h3>Royal Gambit</h3>
+                            <p>Chess is an abstract strategy game that involves no hidden information and no elements of
+                                chance.</p>
+                        </div>
 
+                </div></a>
+
+                <div class="work">
+                    <a href="./whatsapp.html"><img src="./whatsappppppp.jpg" alt="">
+                        <div class="layer">
+                            <h3>Whatsapp</h3>
+                            <p>WhatsApp (officially WhatsApp Messenger) is an instant messaging (IM) and voice-over-IP
+                                (VoIP) service
+                                owned by technology conglomerate Meta.</p>
+                        </div>
+
+                </div></a>
+
+
+                <div class="work">
+                    <a href="./webs.html"><img src="./website.jpg" alt="">
+                        <div class="layer">
+                            <h3>The Webs</h3>
+                            <p>The Webs is a software system that provides hyperlinks to web pages and other relevant
+                                information on
+                                the Web in response.</p>
+                        </div>
+
+                </div></a>
+
+                <div class="work">
+                    <a href="./calculator.html"><img src="./calculator.jpg" alt="">
+                        <div class="layer">
+                            <h3>Calculator</h3>
+                            <p>An electronic calculator is typically a portable electronic device used to perform
+                                calculations,
+                                ranging from basic arithmetic to complex mathematics.</p>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- contact section -->
+    <div id="Contact">
+
+        <h1 class="Connect">Connect</h1>
+        <div class="icon">
+
+            <a href="https://www.facebook.com/"> <i class='bx bxl-meta'></i></a>
+            <a href="https://www.linkedin.com/in/rudra-wankhede-709333314/"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://join.skype.com/invite/tE4ib6Co3tq6"><i class='bx bxl-skype'></i></a>
+            <a href="https://github.com/Rudra1007/rudra_full_stack_developer"><i class='bx bxl-github'></i></a>
+            <a href="https://stackoverflow.com/"><i class='bx bxl-stack-overflow'></i></a>
+        </div>
+        <div class="form">
+            <form action="">
+                <input class="Alias" type="text" placeholder="Alias">
+                <input class="ContactNo" type="number" placeholder=" Contact No">
+                <textarea class="Message" name="Enter Your Message" placeholder="Enter Your Message" id="" cols="40"
+                    rows="15"></textarea>
+
+            </form>
+
+     </div>
+
+            <button style="margin-bottom: 50%;">Submit</button>
+   
+
+    </div>
 </body>
 
 </html>
